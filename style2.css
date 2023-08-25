@@ -1,0 +1,235 @@
+.rotator {
+  background-color: #fff;
+  max-width: 1080px;
+  margin: 0 auto;
+  font-family: Arial, Helvetica;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  border: 3px solid #f0f0f0;
+  box-shadow: 0 0 10px #222;
+  display: flex;
+}
+
+.rotator .head h1 {
+  font-size: 2rem !important;
+  text-align:center;
+  color:#ffffff;
+}
+
+.rotator ul {
+  list-style: none;
+  margin: 0;
+  padding-top: 6px;
+  z-index: 999;
+  position: sticky;
+  top: 5px;
+  align-self: baseline;
+}
+
+.rotator ul li {
+  display: block;
+  width: auto;
+}
+
+.rotator ul li a {
+  width: 230px;
+  float: right;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+  line-height: 10px;
+  background-color: #222;
+  margin: 1px 0px 3px 0;
+  opacity: 0.7;
+  color: #f0f0f0;
+  font-size: 20px;
+  border: 2px solid #000;
+  border-right: none;
+  outline: none;
+  text-shadow: -1px 1px 1px #000;
+  border-radius: 10px 0 0 10px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.rotator ul li a:hover {
+  text-shadow: 0 0 2px #fff;
+}
+
+.rotator ul li .link1:hover + .data1 {
+  color: red;
+}
+
+.rotator .data1,
+.rotator .data2 ,
+.rotator .data3 ,
+.rotator .data4 ,
+.rotator .data5 {
+  transition: all 0.5s ease;
+  opacity: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+
+  
+}
+
+.rotator .data1 .head,
+.rotator .data2 .head {
+}
+
+.rotator .data1 .head h1,
+.rotator .data2 .head h1,
+.rotator .data3 .head h1,
+.rotator .data4 .head h1,
+.rotator .data5 .head h1 {
+  text-shadow: -1px 1px 1px #555;
+  font-weight: normal;
+  font-size: 46px;
+  padding: 20px;
+}
+
+.rotator .data1 .descr,
+.rotator .data2 .descr,
+.rotator .data3 .descr,
+.rotator .data4 .descr,
+.rotator .data5 .descr {
+  padding: 20px;
+  background-color: #222;
+  border-radius: 0 10px 0 0;
+  opacity: 0.9;
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+   display: flex;
+   flex-wrap: wrap;
+}
+.rotator .data1 .descr {
+  padding: 20px;
+  background-color: #222;
+  border-radius: 0 10px 0 0;
+  opacity: 0.9;
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+}
+.rotator .data1 .descr p,
+.rotator .data2 .descr p,
+.rotator .data3 .descr p,
+.rotator .data4 .descr p,
+.rotator .data5 .descr p {
+  text-shadow: -1px 1px 1px #000;
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: 26px;
+}
+
+.rotator .data1 .descr a.more,
+.rotator .data2 .descr a.more {
+  color: orange;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.rotator .data1 .descr a.more:hover,
+.rotator .data2 .descr a.more:hover {
+  color: #fff;
+}
+
+.rotator .data1 {
+  background-color: blue;
+}
+
+.rotator .data2 {
+  background-color: red;
+}
+.rotator .data3 {
+  background-color: blue;
+}
+.rotator .data4 {
+  background-color: red;
+}
+.rotator .data5 {
+  background-color: blue;
+}
+
+.rotator .active {
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+.descr ul li {
+  justify-self: center;
+  font-size: 1em;
+  margin-bottom: .9em;
+  width: 100%;
+}
+.descr strong {
+ line-height: 2rem;
+}
+input[type="text"], input[type="tel"], input[type="email"], input[type="phno"], input[type="password"], textarea{
+  background-color: #fff;
+}
+
+.descr{
+  display:flex;
+  flex-wrap: wrap;
+}
+.data1 .descr p:nth-child(1){
+  flex: 1;
+}
+.thumb{
+  width:192px;
+  height:145px;
+} 
+.thumb:hover {
+  cursor: pointer;
+} 
+figure {
+  margin: 0;
+}
+.data1 img:hover, .data1 img:hover + figcaption  {
+  transform: scale(1.1);
+  transition: all 0.5s ease;
+}
+figcaption{
+  text-align: center;
+  font-size: .8em;
+  font-style: italic;
+  margin-top: .1em;
+}
+/* Style for the modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left:35%;
+  top: 15%;
+  width:auto;
+  background-color: rgba(0, 0, 0, 0.7);
+  overflow: auto;
+  z-index: 9999;
+}
+
+/* Style for the modal content */
+.modal-content {
+  display: block;
+  max-width: 90%;
+  max-height: 90%;
+  margin: 0 auto;
+}
+
+/* Style for the close button */
+.close {
+  position: absolute;
+  top: 15px;
+  left: .5em;
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(12, 12, 12);
+  cursor: pointer;
+}
+#modalImage{
+  transform: none;;
+}

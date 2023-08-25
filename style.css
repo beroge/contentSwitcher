@@ -1,0 +1,156 @@
+.rotator {
+  background-color: #fff;
+  max-width: 800px;
+  width: 100%;
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+  font-family: Arial, Helvetica;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  border: 3px solid #f0f0f0;
+  overflow: hidden;
+  box-shadow: 0 0 10px #222;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .rotator {
+    /* height: auto; */
+  }
+  .rotator ul li {
+    width: 100%;
+  }
+}
+
+.head {
+  container-type: inline-size;
+}
+
+.head h1 {
+  font-size: 5cqw!important; 
+  width:50%
+  }
+
+
+.rotator ul {
+  list-style: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 6px;
+  z-index: 999;
+}
+
+.rotator ul li {
+  display: block;
+  float: left;
+  clear: both;
+  width: 260px;
+}
+
+.rotator ul li a {
+  width: 230px;
+  float: right;
+  padding: 10px;
+  text-decoration: none;
+  display: block;
+  line-height: 10px;
+  background-color: #222;
+  margin: 1px -20px 1px 0;
+  opacity: 0.7;
+  color: #f0f0f0;
+  font-size: 20px;
+  border: 2px solid #000;
+  border-right: none;
+  outline: none;
+  text-shadow: -1px 1px 1px #000;
+  border-radius: 10px 0 0 20px;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.rotator ul li a:hover {
+  text-shadow: 0 0 2px #fff;
+}
+
+.rotator ul li .link1:hover + .data1 {
+  color: red;
+}
+
+.rotator .data1,
+.rotator .data2 {
+  transition: all 0.5s ease;
+  opacity: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.rotator .data1 .head,
+.rotator .data2 .head {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.rotator .data1 .head h1,
+.rotator .data2 .head h1 {
+  text-shadow: -1px 1px 1px #555;
+  font-weight: normal;
+  font-size: 46px;
+  padding: 20px;
+}
+
+.rotator .data1 .descr,
+.rotator .data2 .descr {
+  width: 100%;
+  height: 80px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  background-color: #222;
+  border-radius: 0 10px 0 0;
+  opacity: 0.7;
+  border-top: 2px solid #000;
+  border-right: 2px solid #000;
+}
+
+.rotator .data1 .descr p,
+.rotator .data2 .descr p {
+  text-shadow: -1px 1px 1px #000;
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: 26px;
+}
+
+.rotator .data1 .descr a.more,
+.rotator .data2 .descr a.more {
+  color: orange;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+
+.rotator .data1 .descr a.more:hover,
+.rotator .data2 .descr a.more:hover {
+  color: #fff;
+}
+
+.rotator .data1 {
+  background-color: grey;
+}
+
+.rotator .data2 {
+  background-color: blue;
+}
+
+.rotator .active {
+  opacity: 1;
+  transition: all 0.5s ease;
+}
+
+
