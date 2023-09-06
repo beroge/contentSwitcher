@@ -89,5 +89,8 @@ jQuery(document).on("click", "#myModal", function(event) {
   }
 });
 
+// list effects
+
+
 });
 
