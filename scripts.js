@@ -89,8 +89,44 @@ jQuery(document).on("click", "#myModal", function(event) {
   }
 });
 
-// list effects
+// List effects
 
+const listItems = jQuery("#list li");
+let currentIndex = 0;
+const startButton = jQuery("#listEffect a");
+
+function fadeInNextListItem() {
+  if (currentIndex >= listItems.length) {
+    return;
+  }
+
+  const currentItem = listItems.eq(currentIndex);
+
+  // Use jQuery's animate method with linear easing to fade in the current item
+  currentItem.animate({
+    opacity: 1
+  }, {
+    duration: 1300,
+    easing: 'linear',
+    complete: function() {
+      // Animation complete callback
+      const spanElement = currentItem.find("span");
+      typewriterEffect(spanElement);
+      currentIndex++;
+      fadeInNextListItem();
+    }
+  });
+}
+
+function typewriterEffect(element) {
+  element.css("opacity", 1); // Make the span visible
+  element.addClass("typewriter-text");
+}
+
+startButton.on("click", function() {
+  currentIndex = 0;
+  fadeInNextListItem();
+});
 
 });
 

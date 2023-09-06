@@ -101,44 +101,44 @@
     </div>
     
     <script>
-      // List effects
-      const listItems = jQuery("#list li");
-      let currentIndex = 0;
-      const startButton = jQuery("#listEffect a");
+  //     // List effects
+  //     const listItems = jQuery("#list li");
+  //     let currentIndex = 0;
+  //     const startButton = jQuery("#listEffect a");
 
-      function fadeInNextListItem() {
-        if (currentIndex >= listItems.length) {
-          return;
-        }
+  //     function fadeInNextListItem() {
+  //       if (currentIndex >= listItems.length) {
+  //         return;
+  //       }
 
-        const currentItem = listItems.eq(currentIndex);
+  //       const currentItem = listItems.eq(currentIndex);
 
-        // Use jQuery's animate method with linear easing to fade in the current item
-        currentItem.animate({
-          opacity: 1
-        }, {
-          duration: 1300,
-          easing: 'linear',
-          complete: function() {
-            // Animation complete callback
-            const spanElement = currentItem.find("span");
-            typewriterEffect(spanElement);
-            currentIndex++;
-            fadeInNextListItem();
-          }
-        });
-      }
+  //       // Use jQuery's animate method with linear easing to fade in the current item
+  //       currentItem.animate({
+  //         opacity: 1
+  //       }, {
+  //         duration: 1300,
+  //         easing: 'linear',
+  //         complete: function() {
+  //           // Animation complete callback
+  //           const spanElement = currentItem.find("span");
+  //           typewriterEffect(spanElement);
+  //           currentIndex++;
+  //           fadeInNextListItem();
+  //         }
+  //       });
+  //     }
 
-      function typewriterEffect(element) {
-        element.css("opacity", 1); // Make the span visible
-        element.addClass("typewriter-text");
-      }
+  //     function typewriterEffect(element) {
+  //       element.css("opacity", 1); // Make the span visible
+  //       element.addClass("typewriter-text");
+  //     }
 
-      startButton.on("click", function() {
-        currentIndex = 0;
-        fadeInNextListItem();
-      });
-  </script>
+  //     startButton.on("click", function() {
+  //       currentIndex = 0;
+  //       fadeInNextListItem();
+  //     });
+  // </script>
 </body>
 </html>
 In this modified code, we use the "linear" easing provided by jQuery. This will create a consistent, linear transition from opacity 0 to 1 for each <li> element when you click the "FEATURES" link.
