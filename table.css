@@ -1,5 +1,5 @@
 body{font-family: Arial, Helvetica, sans-serif;}
-  .container {
+  .table-container {
     max-width: 1080px;
     margin-left: auto;
     margin-right: auto;
@@ -17,7 +17,7 @@ body{font-family: Arial, Helvetica, sans-serif;}
   .responsive-table li {
     border-radius: 3px;
     padding: 25px 30px;
-    display: flex;
+    display: flex!important;
     justify-content: space-between;
     margin-bottom: 25px;
   }
@@ -27,7 +27,7 @@ body{font-family: Arial, Helvetica, sans-serif;}
     text-transform: uppercase;
     letter-spacing: 0.03em;
     color:#ffffff;
-    font-size: 1.2rem;
+    font-size: 1rem;
     text-align: center;
     font-weight: bold;
   }
@@ -38,22 +38,22 @@ body{font-family: Arial, Helvetica, sans-serif;}
     background-color: #3223d3;
     color:#fff
   }
-  .responsive-table .col-1 {
+  .responsive-table .col1 {
     flex-basis: 50%;
   }
-  .responsive-table .col-2 {
+  .responsive-table .col2 {
     flex-basis: 10%;
   }
-  .responsive-table .col-3 {
+  .responsive-table .col3 {
     flex-basis: 10%;
   }
-  .responsive-table .col-4 {
+  .responsive-table .col4 {
     flex-basis: 10%;
   }
-  .responsive-table .col-5 {
+  .responsive-table .col5 {
     flex-basis: 10%;
   }
-  .responsive-table .col-2, .responsive-table .col-3, .responsive-table .col-4, .responsive-table .col-5 {
+  .responsive-table .col2, .responsive-table .col3, .responsive-table .col4, .responsive-table .col5 {
     text-align: center;
     font-weight: bold;
     
