@@ -98,7 +98,7 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .content > * + * {
-  margin-top: 1rem;
+  margin-top: 0;
 }
 
 .title {
@@ -107,12 +107,10 @@ body {
   line-height: 1.2;
 }
 
-/* .copy {
+.copy {
 
-  font-size: 1.125rem;
-
-  line-height: 1.35;
-} */
+  font-size:.8
+}
 
 .btn {
   cursor: pointer;
