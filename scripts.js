@@ -128,5 +128,77 @@ startButton.on("click", function() {
   fadeInNextListItem();
 });
 
+// have button with a class of btn reveal popouts with a class of ess by removing the class hidethis  when it is clicked
+jQuery(".btn1").click(function() {
+  jQuery(".ess").removeClass("hidethis");
+});
+jQuery(".btn2").click(function() {
+  jQuery(".adv").removeClass("hidethis");
+});
+jQuery(".btn3").click(function() {
+  jQuery(".prem").removeClass("hidethis");
+});
+jQuery(".btn4").click(function() {
+  jQuery(".ser").removeClass("hidethis");
+});
+
+
+// accordian
+
+var popout = {
+  html: {
+     popouts: document.querySelectorAll('.popout')
+  },
+  popouts: [],
+  init: function(){
+     this.getPopouts()
+     this.addEvents()
+     this.closeAll()
+  },
+  getPopouts: function(){
+     this.popouts = []
+     var popouts = document.querySelectorAll('.popout')
+     for(var i = 0; i < popouts.length; i++){
+        this.popouts.push({
+           container: popouts[i],
+           title: popouts[i].getElementsByClassName('title')[0],
+           text: popouts[i].getElementsByClassName('text')[0]
+        })
+     }
+  },
+  addEvents: function(){
+     var that = this
+     for(var popout of this.popouts){
+        popout.title.addEventListener('click', function(){
+           that.closeAll()
+           this.parentElement.classList.toggle('close')
+        })
+     }
+  },
+  open: function(id){
+     this.popouts[id].container.classList.remove('close')
+  },
+  close: function(id){
+     this.popouts[id].container.classList.add('close')
+  },
+  closeAll: function(){
+     for(var popout of this.popouts){
+        popout.container.classList.add('close')
+     }
+  },
+  openAll: function(){
+     for(var popout of this.popouts){
+        popout.container.classList.remove('close')
+     }
+  }
+}
+
+popout.init()
+
+setTimeout(function(){ popout.close(0) }, 500)
+// setTimeout(function(){ popout.close(0); popout.open(1) }, 1000)
+// setTimeout(function(){ popout.close(1); popout.open(2) }, 2000)
+// setTimeout(function(){ popout.close(2); popout.open(0) }, 3000)
+
 });
 
