@@ -129,18 +129,21 @@ startButton.on("click", function() {
 });
 
 // have button with a class of btn reveal popouts with a class of ess by removing the class hidethis  when it is clicked
-jQuery(".btn1").click(function() {
-  jQuery(".ess").removeClass("hidethis");
+jQuery(".btn1, .btn2, .btn3, .btn4").click(function() {
+  if (jQuery(this).hasClass("btn1")) {
+    jQuery(".ess").removeClass("hidethis");
+    jQuery(".adv, .prem").addClass("hidethis");
+  } else if (jQuery(this).hasClass("btn2")) {
+    jQuery(".adv, .ess").removeClass("hidethis");
+    jQuery(".prem").addClass("hidethis");
+  } else if (jQuery(this).hasClass("btn3")) {
+    jQuery(".prem, .adv, .ess").removeClass("hidethis");
+  } else if (jQuery(this).hasClass("btn4")) {
+    jQuery(".prem, .adv, .ess").removeClass("hidethis");
+    jQuery(".ser").addClass("hidethis");
+  }
 });
-jQuery(".btn2").click(function() {
-  jQuery(".adv").removeClass("hidethis");
-});
-jQuery(".btn3").click(function() {
-  jQuery(".prem").removeClass("hidethis");
-});
-jQuery(".btn4").click(function() {
-  jQuery(".ser").removeClass("hidethis");
-});
+
 
 
 // accordian
